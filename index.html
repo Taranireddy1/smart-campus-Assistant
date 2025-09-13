@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Campus Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Campus Assistant</h1>
+  </header>
+
+  <main>
+    <!-- Quick Access Campus Sections -->
+    <section class="campus-sections">
+      <h2>Campus Sections</h2>
+      <div class="section-grid">
+        <div class="section-card" onclick="showInfo('library')">📚 Library</div>
+        <div class="section-card" onclick="showInfo('student')">🎓 Student Blocks</div>
+        <div class="section-card" onclick="showInfo('sports')">🏀 Sports Block</div>
+        <div class="section-card" onclick="showInfo('cultural')">🎭 Cultural Block</div>
+        <div class="section-card" onclick="showInfo('admin')">🏛️ Admin Block</div>
+      </div>
+    </section>
+
+    <!-- Graphs Section -->
+    <section class="graphs">
+      <h2>Campus Statistics</h2>
+      <div class="graph-container">
+        <canvas id="libraryGraph"></canvas>
+      </div>
+      <div class="graph-container">
+        <canvas id="diningGraph"></canvas>
+      </div>
+    </section>
+
+    <!-- Chatbox -->
+    <section class="chat-container">
+      <div id="chat-box" class="chat-box"></div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ask about schedules, dining, library...">
+        <button id="send-btn">Send</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart Campus Assistant</p>
+  </footer>
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
